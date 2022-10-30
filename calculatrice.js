@@ -27,12 +27,15 @@ function perCent() {
 }
 // To calcul
 function calcul() {
- 
   const valeurEcran = valeur.value;
   const result = eval(valeurEcran);
   valeur.value = result;
 }
 
+// insert '-' to front
+function insertMinustoFront(){
+  valeur.value = "-" + valeur.value;
+}
 // Convert number to binary 
 function convertToBinary() {
   let nombre = valeur.value;
