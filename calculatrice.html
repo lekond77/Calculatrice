@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calculatrice.js" defer></script>
+    <style>
+      table {
+        width: 15em;
+        height: 15em;
+      }
+      input {
+        width: 4em;
+        height: 2em;
+      }
+      #screen, #calcul {
+        width: 17em;
+        height: 5em;
+      }
+      #calcul{
+        width: 17em;
+        height: 2em;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <h1>My calculator</h1>
+    <table>
+      <thead>
+        <tr>
+          <input type="text" id="screen" name="screen" />
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>  
+            <input type="button" value="AC" id="delete" onclick="cleanScreen()" />
+          </td>
+          <td><input type="button" value="SUPP" onclick="cleanLastDigit()" /></td>
+          <td><input type="button" value="%" onclick="perCent()" /></td>
+          <td><input type="button" value="/" onclick="display('/')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="7" onclick="display('7')" /></td>
+          <td><input type="button" value="8" onclick="display('8')" /></td>
+          <td><input type="button" value="9" onclick="display('9')" /></td>
+          <td><input type="button" value="X" onclick="display('*')" /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="4" onclick="display('4')" />
+          </td>
+          <td><input type="button" value="5" onclick="display('5')" /></td>
+          <td><input type="button" value="6" onclick="display('6')" /></td>
+          <td><input type="button" value="-" onclick="display('-')" /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="1" onclick="display('1')" />
+          </td>
+          <td><input type="button" value="2" onclick="display('2')" /></td>
+          <td><input type="button" value="3" onclick="display('3')" /></td>
+          <td><input type="button" value="+" onclick="display('+')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="+/-" onclick="display('-')" /></td>
+          <td><input type="button" value="0" onclick="display('0')" /></td>
+          <td><input type="button" value="," onclick="display('.')" /></td>
+          <td><input type="button"  value="Bin" onclick="convertToBinary()"></td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <input type="button" value="=" id="calcul" onclick="calcul()" />
+            
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
